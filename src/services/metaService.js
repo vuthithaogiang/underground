@@ -1,7 +1,8 @@
 import { ethers } from 'ethers';
 
 import Web3 from 'web3';
-import axiosClient from '~/untils/axiosClient';
+
+import axiosClient from '../untils/axiosClient';
 
 export const handleSignMessage = async (publicAddress, nonce) => {
     try {

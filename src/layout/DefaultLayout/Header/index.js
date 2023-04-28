@@ -16,6 +16,7 @@ import {
     faWallet,
     faCartShopping,
     faXmark,
+    faSignOut,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react/headless';
 import { useEffect, useState, useRef } from 'react';
@@ -54,7 +55,7 @@ const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faIdBadge} />,
         title: 'My Account',
-        to: '/account/:addressWallet',
+        to: '',
     },
     {
         icon: <FontAwesomeIcon icon={faCircleInfo} />,
@@ -66,16 +67,7 @@ const MENU_ITEMS = [
         title: 'Feedback & Helps',
         to: '/contactus',
     },
-    // {
-    //     icon: <FontAwesomeIcon icon={faWandMagicSparkles} />,
-    //     title: 'Create Item',
-    //     to: '/uploadItem',
-    // },
-    // {
-    //     icon: <FontAwesomeIcon icon={faLayerGroup} />,
-    //     title: 'Create Collection',
-    //     to: '/uploadNFT',
-    // },
+
     {
         icon: <FontAwesomeIcon icon={faGear} />,
         title: 'Setting',
@@ -91,6 +83,61 @@ const MENU_DISCOVER = [
     {
         title: 'All Items',
         to: '/NFT-details',
+    },
+];
+
+const USER_MENU = [
+    {
+        icon: <FontAwesomeIcon icon={faEarthAsia} />,
+        title: 'English',
+        children: {
+            title: 'Language',
+            data: [
+                {
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vie',
+                    title: 'Tiếng Việt',
+                },
+            ],
+        },
+    },
+    {
+        icon: <FontAwesomeIcon icon={faIdBadge} />,
+        title: 'My Account',
+        to: '/account/:addressWallet',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faCircleInfo} />,
+        title: 'About Us',
+        to: '/aboutus',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faQuestion} />,
+        title: 'Feedback & Helps',
+        to: '/contactus',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faWandMagicSparkles} />,
+        title: 'Create Item',
+        to: '/uploadItem',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faLayerGroup} />,
+        title: 'Create Collection',
+        to: '/uploadNFT',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faGear} />,
+        title: 'Setting',
+        to: '/account-setting',
+    },
+    {
+        icon: <FontAwesomeIcon icon={faSignOut} />,
+        title: 'Disconect',
+        separate: true,
     },
 ];
 
@@ -121,6 +168,8 @@ function Header() {
         });
         toggleModal();
     };
+    const currentUser = metaMask.isLogin;
+
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
@@ -129,35 +178,33 @@ function Header() {
                     <h4 className={cx('title-logo')}>Underground</h4>
                 </div>
 
-                <>
-                    <Tippy
-                        interactive
-                        visible={searchResult.length > 0}
-                        render={(attrs) => (
-                            <div className={cx('search-result')} tabIndex={'-1'} {...attrs}>
-                                <PopperWrapper>
-                                    <h4 className={cx('search-title')}>Collection</h4>
-                                    <CollectionItem />
-                                    <CollectionItem />
-                                    <CollectionItem />
-                                    <CollectionItem />
-                                    <CollectionItem />
-                                </PopperWrapper>
-                            </div>
-                        )}
-                    >
-                        <div className={cx('search')}>
-                            <input placeholder="Search items" spellCheck={false} />
-                            <button className={cx('clear')}>
-                                <FontAwesomeIcon icon={faCircleXmark} />
-                            </button>
-                            <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
-                            <button className={cx('search-btn')}>
-                                <FontAwesomeIcon icon={faSearch} />
-                            </button>
+                <Tippy
+                    interactive
+                    visible={searchResult.length > 0}
+                    render={(attrs) => (
+                        <div className={cx('search-result')} tabIndex={'-1'} {...attrs}>
+                            <PopperWrapper>
+                                <h4 className={cx('search-title')}>Collection</h4>
+                                <CollectionItem />
+                                <CollectionItem />
+                                <CollectionItem />
+                                <CollectionItem />
+                                <CollectionItem />
+                            </PopperWrapper>
                         </div>
-                    </Tippy>
-                </>
+                    )}
+                >
+                    <div className={cx('search')}>
+                        <input placeholder="Search items" spellCheck={false} />
+                        <button className={cx('clear')}>
+                            <FontAwesomeIcon icon={faCircleXmark} />
+                        </button>
+                        <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
+                        <button className={cx('search-btn')}>
+                            <FontAwesomeIcon icon={faSearch} />
+                        </button>
+                    </div>
+                </Tippy>
 
                 <div className={cx('actions')}>
                     <Tippy
@@ -218,11 +265,23 @@ function Header() {
                     )}
                     <Button className={cx('cart-btn')} leftIcon={<FontAwesomeIcon icon={faCartShopping} />}></Button>
 
-                    <Menu items={MENU_ITEMS}>
-                        <button className={cx('more-btn')}>
-                            <FontAwesomeIcon icon={faEllipsisVertical} />
-                        </button>
-                    </Menu>
+                    {currentUser ? (
+                        <div className={cx('current-user')}>
+                            <Menu items={USER_MENU}>
+                                <img
+                                    className={cx('avatar')}
+                                    src="https://images.squarespace-cdn.com/content/v1/5cb9ef147eb88c5caefa30b3/1679847981481-H74EHYH5P4B340WBPCOU/_MG_5303-Edit-2.jpg?format=300w"
+                                    alt=""
+                                />
+                            </Menu>
+                        </div>
+                    ) : (
+                        <Menu items={MENU_ITEMS}>
+                            <button className={cx('more-btn')}>
+                                <FontAwesomeIcon icon={faEllipsisVertical} />
+                            </button>
+                        </Menu>
+                    )}
                 </div>
             </div>
         </header>

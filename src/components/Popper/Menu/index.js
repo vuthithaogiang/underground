@@ -48,6 +48,7 @@ function Menu({ items = [], children }) {
                     </div>
                 )}
                 placement="bottom-end"
+                onHide={() => setHistory((prev) => prev.slice(0, 1))}
             >
                 {children}
             </Tippy>

@@ -249,3 +249,15 @@ body.active-modal {
         font-size: 1.2rem;
     }
 }
+
+.actions {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+}
