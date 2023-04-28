@@ -1,0 +1,251 @@
+.wrapper {
+    --search-height: 46px;
+    --search-top-spacer: 9px;
+    --search-button-width: 52px;
+
+    width: 100%;
+    height: var(--default-layout-header-height, 60px);
+    box-shadow: 0px 1px 1px 1px rgb(0 0 0/12%);
+    display: flex;
+    justify-content: center;
+}
+
+.inner {
+    height: 100%;
+    width: var(--default-layout-width);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+
+    .img-logo {
+        border-radius: 50%;
+    }
+
+    .title-logo {
+        color: var(--primary-color);
+        font-family: 'Sen', sans-serif;
+        font-weight: 700;
+        font-size: 2.3rem;
+    }
+}
+
+.search {
+    position: relative;
+    display: flex;
+    width: 361px;
+    padding-left: 16px;
+    height: var(--search-height);
+    background-color: rgba(22, 24, 35, 0.06);
+    border-radius: 92px;
+    border: 1.5px solid transparent;
+
+    input {
+        flex: 1;
+        height: 100%;
+        color: #828282;
+        font-size: 1.6rem;
+        border: none;
+        outline: none;
+        background-color: transparent;
+        caret-color: var(--primary-color);
+    }
+
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: rgba(22, 24, 35, 0.75);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: var(--search-top-spacer);
+        right: var(--search-button-width);
+        height: calc(var(--search-height) - var(--search-top-spacer) * 2);
+        width: 1px;
+        background-color: rgba(22, 24, 35, 0.12);
+    }
+
+    &:focus-within {
+        border: 1.5px solid var(--primary-color);
+    }
+}
+
+.search-result {
+    width: 361px;
+}
+
+.search-title {
+    padding: 5px 12px;
+    font-size: 1.4rem;
+    color: rgba(22, 24, 35, 0.5);
+    font-weight: 600;
+}
+
+.clear,
+.loading {
+    font-size: 1.6rem;
+    position: absolute;
+    border: none;
+    right: calc(var(--search-button-width) + 16px);
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(22, 24, 35, 0.34);
+}
+
+.clear {
+    cursor: pointer;
+}
+
+.loading {
+}
+.search-btn {
+    width: var(--search-button-width);
+    height: 100%;
+    outline: none;
+    border: none;
+    border-top-right-radius: 92px;
+    border-bottom-right-radius: 92px;
+    font-size: 1.8rem;
+    color: rgba(22, 24, 35, 0.34);
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+
+    &:active {
+        background-color: rgba(22, 24, 35, 0.06);
+    }
+}
+
+.more-btn {
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    margin-left: 8px;
+    padding: 4px 8px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.discover {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    font-family: 'Sora', sans-serif;
+    margin-right: 10px;
+}
+
+.discover-items {
+    width: 160px;
+
+    .discover-item + .discover-item {
+        margin-left: 0;
+    }
+}
+
+.wallet-btn,
+.cart-btn {
+    min-width: 50px !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+// Modal
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.modal,
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49, 49, 49, 0.8);
+}
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+
+    border-radius: 3px;
+    max-width: 500px;
+    min-width: 300px;
+    padding-bottom: 12px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+}
+
+.modal-header {
+    font-size: 2.2rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 100px;
+    padding: 10px 16px 0 0;
+}
+
+.modal-desc {
+    font-size: 1.4rem;
+    font-family: 'Sora', sans-serif;
+    text-align: center;
+    line-height: 1.4;
+    margin: 18px 0;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal-clear {
+    color: #828282;
+    cursor: pointer;
+}
+
+.modal-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: rgba(22, 24, 35, 0.03);
+    }
+}
+
+.modal-item:nth-of-type(1),
+.modal-item:nth-of-type(2) {
+    position: relative;
+
+    p {
+        position: absolute;
+        left: 68px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    span {
+        font-size: 1.2rem;
+    }
+}
