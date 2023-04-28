@@ -129,33 +129,35 @@ function Header() {
                     <h4 className={cx('title-logo')}>Underground</h4>
                 </div>
 
-                <Tippy
-                    interactive
-                    visible={searchResult.length > 0}
-                    render={(attrs) => (
-                        <div className={cx('search-result')} tabIndex={'-1'} {...attrs}>
-                            <PopperWrapper>
-                                <h4 className={cx('search-title')}>Collection</h4>
-                                <CollectionItem />
-                                <CollectionItem />
-                                <CollectionItem />
-                                <CollectionItem />
-                                <CollectionItem />
-                            </PopperWrapper>
+                <>
+                    <Tippy
+                        interactive
+                        visible={searchResult.length > 0}
+                        render={(attrs) => (
+                            <div className={cx('search-result')} tabIndex={'-1'} {...attrs}>
+                                <PopperWrapper>
+                                    <h4 className={cx('search-title')}>Collection</h4>
+                                    <CollectionItem />
+                                    <CollectionItem />
+                                    <CollectionItem />
+                                    <CollectionItem />
+                                    <CollectionItem />
+                                </PopperWrapper>
+                            </div>
+                        )}
+                    >
+                        <div className={cx('search')}>
+                            <input placeholder="Search items" spellCheck={false} />
+                            <button className={cx('clear')}>
+                                <FontAwesomeIcon icon={faCircleXmark} />
+                            </button>
+                            <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
+                            <button className={cx('search-btn')}>
+                                <FontAwesomeIcon icon={faSearch} />
+                            </button>
                         </div>
-                    )}
-                >
-                    <div className={cx('search')}>
-                        <input placeholder="Search items" spellCheck={false} />
-                        <button className={cx('clear')}>
-                            <FontAwesomeIcon icon={faCircleXmark} />
-                        </button>
-                        <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />
-                        <button className={cx('search-btn')}>
-                            <FontAwesomeIcon icon={faSearch} />
-                        </button>
-                    </div>
-                </Tippy>
+                    </Tippy>
+                </>
 
                 <div className={cx('actions')}>
                     <Tippy
