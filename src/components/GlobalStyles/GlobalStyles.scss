@@ -46,4 +46,17 @@ html ::-webkit-scrollbar-track {
 a[href] {
     color: var(--text-color);
     text-decoration: none;
+    font-weight: 500;
+}
+
+button,
+input,
+[tabindex] {
+    border: none;
+    outline: none;
+}
+
+ul,
+li {
+    list-style: none;
 }

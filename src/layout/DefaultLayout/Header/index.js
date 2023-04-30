@@ -31,115 +31,9 @@ import { connectMetaMaskService } from '~/services/metaService';
 import { useRecoilState } from 'recoil';
 import { connectMetaMaskState } from '~/global-state/connect-metamask';
 import useOnClickOutside from '~/hooks/useOnClickOutside';
+import { useNavigate } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
-
-const MENU_ITEMS = [
-    {
-        icon: <FontAwesomeIcon icon={faEarthAsia} />,
-        title: 'English',
-        children: {
-            title: 'Language',
-            data: [
-                {
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    code: 'vie',
-                    title: 'Tiếng Việt',
-                },
-            ],
-        },
-    },
-    {
-        icon: <FontAwesomeIcon icon={faIdBadge} />,
-        title: 'My Account',
-        to: '',
-    },
-    {
-        icon: <FontAwesomeIcon icon={faCircleInfo} />,
-        title: 'About Us',
-        to: '/aboutus',
-    },
-    {
-        icon: <FontAwesomeIcon icon={faQuestion} />,
-        title: 'Feedback & Helps',
-        to: '/contactus',
-    },
-
-    {
-        icon: <FontAwesomeIcon icon={faGear} />,
-        title: 'Setting',
-        to: '/account-setting',
-    },
-];
-
-const MENU_DISCOVER = [
-    {
-        title: 'All Collections',
-        to: '/collection',
-    },
-    {
-        title: 'All Items',
-        to: '/NFT-details',
-    },
-];
-
-const USER_MENU = [
-    {
-        icon: <FontAwesomeIcon icon={faEarthAsia} />,
-        title: 'English',
-        children: {
-            title: 'Language',
-            data: [
-                {
-                    code: 'en',
-                    title: 'English',
-                },
-                {
-                    code: 'vie',
-                    title: 'Tiếng Việt',
-                },
-            ],
-        },
-    },
-    {
-        icon: <FontAwesomeIcon icon={faIdBadge} />,
-        title: 'My Account',
-        to: '/account/:addressWallet',
-    },
-    {
-        icon: <FontAwesomeIcon icon={faCircleInfo} />,
-        title: 'About Us',
-        to: '/aboutus',
-    },
-    {
-        icon: <FontAwesomeIcon icon={faQuestion} />,
-        title: 'Feedback & Helps',
-        to: '/contactus',
-    },
-    {
-        icon: <FontAwesomeIcon icon={faWandMagicSparkles} />,
-        title: 'Create Item',
-        to: '/uploadItem',
-    },
-    {
-        icon: <FontAwesomeIcon icon={faLayerGroup} />,
-        title: 'Create Collection',
-        to: '/uploadNFT',
-    },
-    {
-        icon: <FontAwesomeIcon icon={faGear} />,
-        title: 'Setting',
-        to: '/account-setting',
-    },
-    {
-        icon: <FontAwesomeIcon icon={faSignOut} />,
-        title: 'Disconect',
-        separate: true,
-    },
-];
 
 function Header() {
     const [searchResult, setSearchResult] = useState([]);
@@ -151,6 +45,7 @@ function Header() {
     const [modal, setModal] = useState(false);
     const [metaMask, setMetaMask] = useRecoilState(connectMetaMaskState);
     const refModal = useRef();
+    const navigate = useNavigate();
     const toggleModal = () => {
         setModal(!modal);
     };
@@ -169,11 +64,117 @@ function Header() {
         toggleModal();
     };
     const currentUser = metaMask.isLogin;
+    console.log('A: ', metaMask.accountCurrent);
+    const MENU_ITEMS = [
+        {
+            icon: <FontAwesomeIcon icon={faEarthAsia} />,
+            title: 'English',
+            children: {
+                title: 'Language',
+                data: [
+                    {
+                        code: 'en',
+                        title: 'English',
+                    },
+                    {
+                        code: 'vie',
+                        title: 'Tiếng Việt',
+                    },
+                ],
+            },
+        },
+        {
+            icon: <FontAwesomeIcon icon={faIdBadge} />,
+            title: 'My Account',
+            to: '',
+        },
+        {
+            icon: <FontAwesomeIcon icon={faCircleInfo} />,
+            title: 'About Us',
+            to: '/aboutus',
+        },
+        {
+            icon: <FontAwesomeIcon icon={faQuestion} />,
+            title: 'Feedback & Helps',
+            to: '/contactus',
+        },
 
+        {
+            icon: <FontAwesomeIcon icon={faGear} />,
+            title: 'Setting',
+            to: '/account-setting',
+        },
+    ];
+
+    const MENU_DISCOVER = [
+        {
+            title: 'All Collections',
+            to: '/collection',
+        },
+        {
+            title: 'All Items',
+            to: '/NFT-details',
+        },
+    ];
+
+    const USER_MENU = [
+        {
+            icon: <FontAwesomeIcon icon={faEarthAsia} />,
+            title: 'English',
+            children: {
+                title: 'Language',
+                data: [
+                    {
+                        code: 'en',
+                        title: 'English',
+                    },
+                    {
+                        code: 'vie',
+                        title: 'Tiếng Việt',
+                    },
+                ],
+            },
+        },
+        {
+            icon: <FontAwesomeIcon icon={faIdBadge} />,
+            title: 'My Account',
+            to: `/account/${metaMask.accountCurrent}`,
+        },
+        {
+            icon: <FontAwesomeIcon icon={faCircleInfo} />,
+            title: 'About Us',
+            to: '/aboutus',
+        },
+        {
+            icon: <FontAwesomeIcon icon={faQuestion} />,
+            title: 'Feedback & Helps',
+            to: '/contactus',
+        },
+        {
+            icon: <FontAwesomeIcon icon={faWandMagicSparkles} />,
+            title: 'Create Item',
+            to: '/uploadItem',
+        },
+        {
+            icon: <FontAwesomeIcon icon={faLayerGroup} />,
+            title: 'Create Collection',
+            to: '/uploadNFT',
+        },
+        {
+            icon: <FontAwesomeIcon icon={faGear} />,
+            title: 'Setting',
+            to: '/account-setting',
+        },
+        {
+            icon: <FontAwesomeIcon icon={faSignOut} />,
+            title: 'Disconect',
+            separate: true,
+        },
+    ];
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <div className={cx('logo')}>
+                <div className={cx('logo')} onClick={() => navigate('/')}>
                     <img className={cx('img-logo')} src={images.logo} alt="Underground" />
                     <h4 className={cx('title-logo')}>Underground</h4>
                 </div>
@@ -207,21 +208,23 @@ function Header() {
                 </Tippy>
 
                 <div className={cx('actions')}>
-                    <Tippy
-                        interactive
-                        render={(attrs) => (
-                            <div className={cx('discover-items')} tabIndex={'-1'} {...attrs}>
-                                <PopperWrapper>
-                                    {MENU_DISCOVER.map((item, index) => {
-                                        return <MenuItem className={cx('discover-item')} key={index} item={item} />;
-                                    })}
-                                </PopperWrapper>
-                            </div>
-                        )}
-                        placement="bottom-end"
-                    >
-                        <span className={cx('discover')}>Discover</span>
-                    </Tippy>
+                    <>
+                        <Tippy
+                            interactive
+                            render={(attrs) => (
+                                <div className={cx('discover-items')} tabIndex={'-1'} {...attrs}>
+                                    <PopperWrapper>
+                                        {MENU_DISCOVER.map((item, index) => {
+                                            return <MenuItem className={cx('discover-item')} key={index} item={item} />;
+                                        })}
+                                    </PopperWrapper>
+                                </div>
+                            )}
+                            placement="bottom-end"
+                        >
+                            <span className={cx('discover')}>Discover</span>
+                        </Tippy>
+                    </>
 
                     <Button
                         onClick={toggleModal}
