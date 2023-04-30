@@ -1,0 +1,43 @@
+.wrapper {
+    max-width: 240px;
+    margin: 0 auto;
+    padding: 12px;
+    margin-top: 22px;
+    background: #282c30;
+    border-radius: 12px;
+    cursor: pointer;
+
+    p {
+        font-family: 'Sora';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        line-height: 1.62;
+        /* or 162% */
+
+        text-align: center;
+
+        /* Text Color/gray-1 */
+
+        color: #858b93;
+    }
+}
+
+.inner {
+}
+
+.thumbnail {
+    width: 90%;
+    height: 154px;
+    object-fit: cover;
+}
+
+.icon {
+    padding: 50px 0;
+}
+
+.drop-input {
+}
+
+.thumbnail {
+}

@@ -1,0 +1,95 @@
+.wrapper {
+    margin-top: 35px;
+    color: #858b93;
+    padding: 10px;
+}
+.heading {
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 50px;
+    color: #f9f9f9;
+}
+
+.note {
+    padding-top: 10px;
+    span {
+        font-family: 'Sora';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 15px;
+
+        color: #ffffff;
+
+        opacity: 0.8;
+    }
+
+    p {
+        font-family: 'Sora';
+
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 13px;
+        /* identical to box height */
+
+        color: #91969e;
+
+        opacity: 0.6;
+    }
+}
+.list-dropzone {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 70px;
+}
+
+.list-dropzone .item {
+    text-align: center;
+}
+
+.wrap-icon {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+}
+
+.item:nth-child(1) .wrap-icon {
+    background-color: #0cce84;
+}
+
+.item:nth-child(2) .wrap-icon {
+    background-color: #ef8f00;
+}
+
+.item:nth-child(3) .wrap-icon {
+    background-color: #ae8ff9;
+}
+
+.item:nth-child(1) .wrap-icon::after,
+.item:nth-child(2) .wrap-icon::after {
+    position: absolute;
+    content: '';
+    left: calc(100% + 52px);
+    bottom: 50%;
+    width: 194.5px;
+    height: 0px;
+    border: 1px dashed #858b93;
+}
+
+.desc {
+    margin-top: 30px;
+    font-family: 'Sora';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.2rem;
+    line-height: 1.45;
+    color: #f9f9f9;
+}
