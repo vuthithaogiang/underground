@@ -9,6 +9,7 @@ import { constSelector, useRecoilState } from 'recoil';
 import axiosClient from '~/untils/axiosClient';
 import BackDrop from '~/components/BackDrop';
 import { useNavigate } from 'react-router-dom';
+import Button from '~/components/Button';
 
 const cx = classNames.bind(styles);
 
@@ -76,6 +77,7 @@ function UploadCollection() {
         setValue('categoryId', event.target.value);
     };
 
+    console.log(categories);
     return (
         <div className={cx('wrapper')}>
             <h4 className={cx('heading')}>Upload collection</h4>
@@ -151,33 +153,13 @@ function UploadCollection() {
 
                             {errors.name && <p className={cx('form-error')}>{errors.name.message}</p>}
                         </div>
-                    </div>
 
-                    <div className={cx('form-group')}>
-                        <label className={cx('form-label', 'large')}>What the type of your collection?</label>
-
-                        <select
-                            {...register('categoryId', {
-                                required: 'Required',
-                            })}
-                            onChange={handleChange}
-                        >
-                            {categories?.map((item) => (
-                                <option key={item.categoryId} value={item.categoryId}>
-                                    {item.categoryName}
-                                </option>
-                            ))}
-                        </select>
-
-                        {errors.categoryId && <p className={cx('form-error')}>Choose a Category.</p>}
-                    </div>
-
-                    <div className={cx('form-row')}>
                         <div className={cx('form-group')}>
                             <label className={cx('form-label')} htmlFor="description">
                                 Description
                             </label>
                             <textarea
+                                className={cx('form-textarea')}
                                 id="description"
                                 placeholder="Something about your collection"
                                 name="description"
@@ -192,9 +174,39 @@ function UploadCollection() {
                         </div>
                     </div>
 
-                    <button type="submit" onClick={() => handleSubmit(connectCreateCollectionService)}>
+                    <div className={cx('form-row')}>
+                        <div className={cx('form-group')}>
+                            <label htmlFor="categoryId" className={cx('form-label', 'large')}>
+                                What the type of your collection?
+                            </label>
+
+                            <div className={cx('select')}>
+                                <select
+                                    {...register('categoryId', {
+                                        required: 'Required',
+                                    })}
+                                    onChange={handleChange}
+                                    id="categoryId"
+                                >
+                                    {categories?.map((item) => (
+                                        <option key={item.categoryId} value={item.categoryId}>
+                                            {item.categoryName}
+                                        </option>
+                                    ))}
+                                </select>
+                            </div>
+                            {errors.categoryId && <p className={cx('form-error')}>Choose a Category.</p>}
+                        </div>
+                    </div>
+
+                    <Button
+                        primary
+                        className={cx('submit-btn')}
+                        type="submit"
+                        onClick={() => handleSubmit(connectCreateCollectionService)}
+                    >
                         Upload
-                    </button>
+                    </Button>
                 </div>
             </form>
 

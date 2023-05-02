@@ -93,3 +93,121 @@
     line-height: 1.45;
     color: #f9f9f9;
 }
+
+.upload-box {
+    padding: 28px 32px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 42px;
+    margin-bottom: 30px;
+
+    textarea,
+    select {
+        border: none;
+        outline: none;
+    }
+}
+
+.form-label,
+.form-input {
+    display: block;
+}
+
+.form-group {
+    flex-grow: 1;
+    textarea {
+        resize: none;
+        border-bottom: 2px solid #282828;
+    }
+}
+
+.form-group:focus-within .form-input {
+    border-color: var(--primary-color);
+}
+
+.form-group:focus-within .form-textarea {
+    border-color: var(--primary-color);
+}
+
+.form-label {
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: linear-gradient(92.64deg, #c4f566 -11.2%, #ff6e6e 123.12%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    font-family: 'Sora', sans-serif;
+    background-color: transparent;
+    color: #fff;
+    border-bottom: 2px solid #282c30;
+    padding: 8px 0 14px 0;
+}
+
+.form-input {
+    padding-bottom: 30px;
+}
+
+.form-input::placeholder {
+    font-family: 'Sora', sans-serif;
+}
+
+.form-error {
+    color: #eb9204;
+    font-size: 0.9rem;
+    opacity: 0.9;
+    display: none;
+}
+
+.select {
+    position: relative;
+    display: flex;
+    width: 12em;
+    height: 2.4em;
+    line-height: 2.4;
+    background-color: #5c6664;
+    border-radius: 8px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 10px;
+
+    select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        outline: 0;
+        border: none;
+        box-shadow: none;
+        background-color: #5c6664;
+        background-image: none;
+        flex: 1;
+        padding: 0 10px;
+        color: #fff;
+        cursor: pointer;
+        font-family: 'Sora', sans-serif;
+    }
+
+    select::-ms-expand {
+        display: none;
+    }
+
+    &::after {
+        content: '\25BC';
+        position: absolute;
+        right: 0;
+        top: 0;
+        padding: 0 0.8em;
+        cursor: pointer;
+        pointer-events: none;
+        transition: 0.25s all ease;
+    }
+}

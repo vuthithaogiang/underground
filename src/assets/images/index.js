@@ -10,6 +10,12 @@ const images = {
     uploadIcon1: require('~/assets/images/uploadIcon1.svg').default,
     uploadIcon2: require('~/assets/images/uploadIcon2.svg').default,
     uploadIcon3: require('~/assets/images/uploadIcon3.svg').default,
+    iconIntro1: require('~/assets/images/iconIntro1.svg').default,
+    iconIntro2: require('~/assets/images/iconIntro2.svg').default,
+    iconIntro3: require('~/assets/images/iconIntro3.svg').default,
+    roundDecor: require('~/assets/images/roundDecor.svg').default,
+    profile1: require('~/assets/images/profile1.svg').default,
+    profile2: require('~/assets/images/profile2.svg').default,
 };
 
 export default images;
