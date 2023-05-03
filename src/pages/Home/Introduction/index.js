@@ -102,8 +102,8 @@ function Introduction() {
                                 <p>Underground</p>
 
                                 <div className={cx('list-avatar')}>
-                                    <img className={cx('avatar')} src={images.profile1} />
-                                    <img className={cx('avatar')} src={images.profile2} />
+                                    <img className={cx('avatar')} src={images.profile1} alt="" />
+                                    <img className={cx('avatar')} src={images.profile2} alt="" />
                                 </div>
                             </div>
                         </div>

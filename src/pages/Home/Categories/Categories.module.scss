@@ -1,0 +1,45 @@
+.wrapper {
+    padding: 148px 0;
+    color: #f9f9f9;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-bottom: 16px;
+
+    border-bottom: 2px solid #282c30;
+    padding-bottom: 10px;
+}
+
+.btn-actions {
+    position: relative;
+    font-size: 2.4rem;
+    font-weight: 600;
+    color: #858b93;
+    cursor: pointer;
+}
+
+.btn-actions.active::after {
+    position: absolute;
+    content: '';
+    bottom: -12px;
+    height: 2px;
+    left: 0px;
+    width: 100%;
+    transition: background-color 0.25s ease-in-out 0s;
+    background-color: #bcc6d0;
+}
+.btn-actions.active {
+    color: #f9f9f9;
+}
+
+.carousel-container {
+    z-index: 9;
+    padding-top: 35px;
+}
+
+.list-collection {
+    margin-right: 14px;
+}

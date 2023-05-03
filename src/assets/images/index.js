@@ -42,6 +42,14 @@ const images = {
     artCollection6: require('~/assets/images/artCollection6.png'),
     artCollection7: require('~/assets/images/artCollection7.png'),
     iconV: require('~/assets/images/iconV.svg').default,
+    category1: require('~/assets/images/category1.png'),
+    category2: require('~/assets/images/category2.png'),
+    category3: require('~/assets/images/category3.png'),
+    category4: require('~/assets/images/category4.png'),
+    category5: require('~/assets/images/category5.png'),
+    category6: require('~/assets/images/category6.jpg'),
+    category7: require('~/assets/images/category7.png'),
+    category8: require('~/assets/images/category8.png'),
 };
 
 export default images;

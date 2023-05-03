@@ -41,7 +41,7 @@ function Trending() {
                             <div className={cx('list-value')} key={filtered.title}>
                                 {filtered.time.map((value, index) => (
                                     <div
-                                        className={index + 1 == currentState ? cx('value', 'active') : cx('value')}
+                                        className={index + 1 === currentState ? cx('value', 'active') : cx('value')}
                                         key={value}
                                         onClick={() => setCurrentState(index + 1)}
                                     >

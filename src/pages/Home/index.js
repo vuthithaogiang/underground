@@ -5,6 +5,7 @@ import Trending from './Trending';
 import NotableCollection from './NotableCollections';
 import ArtSpotlightCollections from './ArtSpotlightCollections';
 import Features from './Features';
+import Categories from './Categories';
 
 const cx = classNames.bind(styles);
 
@@ -16,6 +17,7 @@ function Home() {
             <NotableCollection />
             <ArtSpotlightCollections />
             <Features />
+            <Categories />
         </main>
     );
 }

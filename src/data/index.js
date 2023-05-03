@@ -192,3 +192,63 @@ export const artCollections = [
         total_volume: 32,
     },
 ];
+
+export const categoryCollection = [
+    {
+        imageId: images.category1,
+        name: 'InfiniGods - The Elder Gods',
+        auth: true,
+        floor: 0.07,
+        categoryId: 1,
+    },
+    {
+        imageId: images.category2,
+        name: 'Vokano Adventure lub',
+        auth: false,
+        floor: 0.24,
+        categoryId: 1,
+    },
+    {
+        imageId: images.category3,
+        name: 'RTFKT Clone XForging',
+        auth: true,
+        floor: 0.01,
+        categoryId: 2,
+    },
+
+    {
+        imageId: images.category4,
+        name: 'Wolf Game',
+        auth: true,
+        floor: 0.205,
+        categoryId: 2,
+    },
+    {
+        imageId: images.category5,
+        name: 'Fixels - Farm land',
+        auth: true,
+        floor: 0.25,
+        categoryId: 2,
+    },
+    {
+        imageId: images.category6,
+        name: 'Shibera - On zkSyncERA',
+        auth: false,
+        floor: 0.01,
+        categoryId: 2,
+    },
+    {
+        imageId: images.category7,
+        name: 'The Quilling',
+        auth: false,
+        floor: 0.012,
+        categoryId: 1,
+    },
+    {
+        imageId: images.category8,
+        name: 'Reo Cragun',
+        auth: false,
+        floor: 0.4,
+        categoryId: 1,
+    },
+];
