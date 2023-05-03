@@ -214,21 +214,50 @@
 .list-item .item:nth-child(1) {
     top: 84px;
     left: 0;
+
+    p {
+        background: linear-gradient(89.86deg, #ef8f00 -6.27%, #ff7667 90.08%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
 }
 
 .list-item .item:nth-child(2) {
     top: 112px;
     right: 33px;
+    p {
+        background: linear-gradient(89.93deg, #0cce84 3.45%, #ae8ef9 99.07%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
 }
 
 .list-item .item:nth-child(3) {
     right: -28px;
     bottom: 100px;
+    p {
+        background: linear-gradient(92.64deg, #c4f566 -11.2%, #ff6e6e 123.12%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
 }
 
 .list-item .item:nth-child(4) {
     left: -48px;
     bottom: 170px;
+    p {
+        background: linear-gradient(92.64deg, #c4f566 -11.2%, #ff6e6e 123.12%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
 }
 
 .list-avatar {

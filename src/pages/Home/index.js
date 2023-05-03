@@ -1,14 +1,16 @@
 import classNames from 'classnames/bind';
 import styles from './Home.module.scss';
 import Introduction from './Introduction';
+import Trending from './Trending';
 
 const cx = classNames.bind(styles);
 
 function Home() {
     return (
-        <div className={cx('container')}>
+        <main className={cx('container')}>
             <Introduction />
-        </div>
+            <Trending />
+        </main>
     );
 }
 

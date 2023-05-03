@@ -24,15 +24,9 @@ function Introduction() {
     const number = [1, 2, 3];
 
     const [slider, setSlider] = useState(1);
-    // useEffect(() => {
-    //     let i = 0;
-    //     setSlider(number[i]);
-    //     i++;
-
-    //     if (i > 2) {
-    //         i = 0;
-    //     }
-    // }, []);
+    useEffect(() => {
+        setSlider(2);
+    }, []);
     return (
         <div className={cx('wrapper')}>
             <div className={cx('inner')}>

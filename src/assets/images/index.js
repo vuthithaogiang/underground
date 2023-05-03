@@ -16,6 +16,16 @@ const images = {
     roundDecor: require('~/assets/images/roundDecor.svg').default,
     profile1: require('~/assets/images/profile1.svg').default,
     profile2: require('~/assets/images/profile2.svg').default,
+    thumbnailCollection1: require('~/assets/images/thumbnailCollection1.jpg'),
+    thumbnailCollection2: require('~/assets/images/thumbnailCollection2.png'),
+    thumbnailCollection3: require('~/assets/images/thumbnailcollection3.png'),
+    thumbnailCollection4: require('~/assets/images/thumbnailCollection4.png'),
+    thumbnailCollection5: require('~/assets/images/thumbnailCollection5.png'),
+    thumbnailCollection6: require('~/assets/images/thumbnailCollection6.png'),
+    thumbnailCollection7: require('~/assets/images/thumbnailCollection8.png'),
+    thumbnailCollection8: require('~/assets/images/thumbnailCollection9.gif'),
+    thumbnailCollection9: require('~/assets/images/thumbnailCollection10.png'),
+    thumbnailCollection10: require('~/assets/images/thumbnailCollection11.png'),
 };
 
 export default images;
