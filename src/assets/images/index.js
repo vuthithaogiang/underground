@@ -26,6 +26,14 @@ const images = {
     thumbnailCollection8: require('~/assets/images/thumbnailCollection9.gif'),
     thumbnailCollection9: require('~/assets/images/thumbnailCollection10.png'),
     thumbnailCollection10: require('~/assets/images/thumbnailCollection11.png'),
+    notableCollection1: require('~/assets/images/notableCollection1.png'),
+    notableCollection2: require('~/assets/images/notableCollection2.png'),
+    notableCollection3: require('~/assets/images/notableCollection3.png'),
+    notableCollection4: require('~/assets/images/notableCollection4.png'),
+    notableCollection5: require('~/assets/images/notableCollection5.png'),
+    notableCollection6: require('~/assets/images/notableCollection6.png'),
+    notableCollection7: require('~/assets/images/notableCollection7.png'),
+    notableCollection8: require('~/assets/images/notableCollection8.png'),
 };
 
 export default images;

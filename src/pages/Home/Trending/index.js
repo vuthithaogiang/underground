@@ -59,12 +59,12 @@ function Trending() {
                 <div className={cx('list-item-title')}>
                     <span>COLLECTION</span>
                     <span>FLOOR PRICE</span>
-                    <span>VOLUMN</span>
+                    <span>VOLUME</span>
                 </div>
                 <div className={cx('list-item-title')}>
                     <span>COLLECTION</span>
                     <span>FLOOR PRICE</span>
-                    <span>VOLUMN</span>
+                    <span>VOLUME</span>
                 </div>
                 {collectionItems.map((item, index) => (
                     <div className={cx('item')} key={index}>
@@ -77,7 +77,7 @@ function Trending() {
 
                         {item.floor_price === null ? <span>_</span> : <span>{item.floor_price} ETH</span>}
                         <div className={cx('volumn')}>
-                            <span>{item.volume}ETH</span>
+                            <span>{item.volume} ETH</span>
 
                             {item.percentVolumn < 0 && (
                                 <span className={cx('volumn-increase')}> {item.percentVolumn}%</span>

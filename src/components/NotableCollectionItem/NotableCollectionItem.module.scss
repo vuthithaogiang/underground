@@ -1,0 +1,52 @@
+.wrapper {
+    width: 286px;
+}
+
+.inner {
+    width: calc(100% - 18px);
+    flex-shrink: 0;
+    cursor: pointer;
+    border-radius: 12px;
+    background: #282c30;
+    transition: all 0.25 ease;
+    &:hover {
+        margin-top: -12px;
+    }
+}
+.thumb {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: inline-flex;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+}
+.icon {
+    width: 12px;
+    height: 12px;
+}
+
+.list-value {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 12px;
+}
+.collection-name {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px;
+
+    span {
+        font-size: 1.4rem;
+    }
+}
+
+.title {
+    font-size: 1.3rem;
+    color: #858b93;
+    line-height: 1.8;
+}
+
+.value {
+}

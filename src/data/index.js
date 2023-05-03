@@ -81,3 +81,62 @@ export const collectionItems = [
         percentVolumn: -2,
     },
 ];
+
+export const notableCollections = [
+    {
+        imageId: images.notableCollection1,
+        name: 'Reworld by Poope Raineto',
+        auth: true,
+        floor: 1.15,
+        total_volume: 372,
+    },
+    {
+        imageId: images.notableCollection2,
+        name: 'Llamanerse Genesis',
+        auth: true,
+        floor: 0.35,
+        total_volume: 10000,
+    },
+    {
+        imageId: images.notableCollection3,
+        name: 'Lets Walk',
+        auth: true,
+        floor: 0.98,
+        total_volume: 5602,
+    },
+    {
+        imageId: images.notableCollection4,
+        name: 'ASM Brain',
+        auth: true,
+        floor: 0.25,
+        total_volume: 9362,
+    },
+    {
+        imageId: images.notableCollection5,
+        name: 'Azuki',
+        auth: true,
+        floor: 16.93,
+        total_volume: 3940,
+    },
+    {
+        imageId: images.notableCollection6,
+        name: 'end of sartoshi - eos pass',
+        auth: false,
+        floor: 0.05,
+        total_volume: 1,
+    },
+    {
+        imageId: images.notableCollection7,
+        name: 'Imps by SuperNfty',
+        auth: true,
+        floor: 0.02,
+        total_volume: 1438,
+    },
+    {
+        imageId: images.notableCollection8,
+        name: 'Clik Create',
+        auth: false,
+        floor: 0.04,
+        total_volume: 6,
+    },
+];
