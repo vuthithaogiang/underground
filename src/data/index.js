@@ -140,3 +140,55 @@ export const notableCollections = [
         total_volume: 6,
     },
 ];
+
+export const artCollections = [
+    {
+        imageId: images.artCollection1,
+        name: 'Heart strings by Taj',
+        auth: false,
+        floor: 0.049,
+        total_volume: 43,
+    },
+    {
+        imageId: images.artCollection2,
+        name: 'The Sad Cats',
+        auth: true,
+        floor: 0.03,
+        total_volume: 298,
+    },
+    {
+        imageId: images.artCollection3,
+        name: 'Finiliar',
+        auth: true,
+        floor: 0.21,
+        total_volume: 4.407,
+    },
+    {
+        imageId: images.artCollection4,
+        name: 'SlimHoods',
+        auth: true,
+        floor: 0.04,
+        total_volume: 9.887,
+    },
+    {
+        imageId: images.artCollection5,
+        name: 'Check-VV Edition',
+        auth: true,
+        floor: 0.55,
+        total_volume: 49,
+    },
+    {
+        imageId: images.artCollection6,
+        name: 'OCM Dessert ',
+        auth: true,
+        floor: 0.33,
+        total_volume: 11,
+    },
+    {
+        imageId: images.artCollection7,
+        name: 'Genesis Box',
+        auth: true,
+        floor: 0.09,
+        total_volume: 32,
+    },
+];

@@ -1,13 +1,12 @@
 import classNames from 'classnames/bind';
-import styles from './NotableCollection.module.scss';
+import styles from './ArtSpotlightCollections.module.scss';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import { notableCollections } from '~/data';
+import { artCollections } from '~/data';
 import NotableCollectionItem from '~/components/NotableCollectionItem';
-
 const cx = classNames.bind(styles);
 
-function NotableCollection() {
+function ArtSpotlightCollections() {
     const responsive = {
         superLargeDesktop: {
             // the naming can be any, depends on you.
@@ -31,16 +30,17 @@ function NotableCollection() {
         <div className={cx('wrapper')}>
             <header className={cx('header')}>
                 <h2 className={cx('heading')}>
-                    <strong>Notable</strong> Collections
+                    <strong>Art Spotlight</strong> Collections
                 </h2>
             </header>
 
             <Carousel responsive={responsive} containerClass={cx('carousel-container')} showDots={false}>
-                {notableCollections.map((item, index) => (
+                {artCollections.map((item, index) => (
                     <NotableCollectionItem key={index} data={item} />
                 ))}
             </Carousel>
         </div>
     );
 }
-export default NotableCollection;
+
+export default ArtSpotlightCollections;

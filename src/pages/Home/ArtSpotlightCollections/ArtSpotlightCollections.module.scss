@@ -1,0 +1,30 @@
+.wrapper {
+    color: #f9f9f9;
+    padding-top: 35px;
+    padding-bottom: 70px;
+}
+
+.header {
+}
+
+.heading {
+    font-family: 'Sora';
+
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 1.25;
+
+    text-align: center;
+    strong {
+        background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
+}
+
+.carousel-container {
+    z-index: 9;
+    padding-top: 50px;
+}

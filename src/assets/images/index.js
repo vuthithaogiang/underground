@@ -34,6 +34,14 @@ const images = {
     notableCollection6: require('~/assets/images/notableCollection6.png'),
     notableCollection7: require('~/assets/images/notableCollection7.png'),
     notableCollection8: require('~/assets/images/notableCollection8.png'),
+    artCollection1: require('~/assets/images/artCollection1.png'),
+    artCollection2: require('~/assets/images/artCollection2.png'),
+    artCollection3: require('~/assets/images/artCollection3.png'),
+    artCollection4: require('~/assets/images/artCollection4.png'),
+    artCollection5: require('~/assets/images/artCollection5.svg').default,
+    artCollection6: require('~/assets/images/artCollection6.png'),
+    artCollection7: require('~/assets/images/artCollection7.png'),
+    iconV: require('~/assets/images/iconV.svg').default,
 };
 
 export default images;

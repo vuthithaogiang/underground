@@ -37,9 +37,9 @@ function Introduction() {
                         </h2>
 
                         <p className={cx('desc')}>
-                            Powering a productive team means using a powerful tool (and plenty of snacks). From meetings
-                            and projects to events and goal setting, Underground intuitive features give any team the
-                            ability to quickly set up and customize workflows for just about anything
+                            We are an all-star team and community of NFT traders and collectors that curates project
+                            discovery with a purpose. We leverage our extensive experience, data-driven decision making,
+                            and in-house custom tools to empower your growth in Web3.
                         </p>
                     </div>
 

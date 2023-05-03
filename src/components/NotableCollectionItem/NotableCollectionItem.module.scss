@@ -22,8 +22,9 @@
     border-top-left-radius: 12px;
 }
 .icon {
-    width: 12px;
-    height: 12px;
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
 }
 
 .list-value {
@@ -46,7 +47,4 @@
     font-size: 1.3rem;
     color: #858b93;
     line-height: 1.8;
-}
-
-.value {
 }
