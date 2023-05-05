@@ -6,6 +6,7 @@ import NotableCollection from './NotableCollections';
 import ArtSpotlightCollections from './ArtSpotlightCollections';
 import Features from './Features';
 import Categories from './Categories';
+import Dashboard from './Dashboard';
 
 const cx = classNames.bind(styles);
 
@@ -18,6 +19,7 @@ function Home() {
             <ArtSpotlightCollections />
             <Features />
             <Categories />
+            <Dashboard />
         </main>
     );
 }

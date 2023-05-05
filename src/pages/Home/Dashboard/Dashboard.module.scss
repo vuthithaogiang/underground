@@ -1,0 +1,234 @@
+.wrapper {
+    color: #f9f9f9;
+    font-family: 'Sora', sans-serif;
+}
+.header {
+    text-align: center;
+
+    h2 {
+        font-weight: 600;
+        font-size: 4rem;
+        line-height: 1.25;
+        width: 497px;
+        margin: 0 auto;
+    }
+
+    h2 > strong {
+        background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: transparent;
+    }
+
+    .desc {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 26px;
+        color: #858b93;
+        width: 747px;
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+}
+
+.list-dashboard {
+    margin: 44px auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.dashboard-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    background: #282c30;
+    border-radius: 23px;
+    padding: 12px 18px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    column-gap: 16px;
+}
+
+.item-activity {
+    width: calc(334px + 2 * 46px);
+    padding: 55px 46px;
+    background: #191b1d;
+    border-radius: 19px;
+
+    h4 {
+        margin-bottom: 20px;
+        font-weight: 600;
+        font-size: 2.2rem;
+        line-height: 1.45;
+
+        color: #ffffff;
+    }
+}
+
+.item-activity-nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 8px 12px;
+
+    span {
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 15px;
+        color: #ffffff;
+        width: 25%;
+        margin-left: 0;
+    }
+}
+
+.detail-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    font-weight: 300;
+    font-size: 0.8rem;
+    line-height: 13px;
+    background: #313539;
+    border-radius: 3px;
+    color: #9ea1a7;
+    padding: 8px 12px;
+
+    &:hover {
+        background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
+        color: #ffff;
+    }
+
+    + .detail-inner {
+        margin-top: 10px;
+    }
+    .child {
+        width: 25%;
+        margin-left: 0;
+        overflow: hidden;
+    }
+}
+
+.detail-inner .icon {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+
+    img {
+        width: 14px;
+        height: 14px;
+        object-fit: cover;
+    }
+}
+.price-history {
+    width: calc(334px + 2 * 46px);
+}
+
+.price-history-top .title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    img {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+    }
+
+    h4 {
+        font-weight: 600;
+        font-size: 2.2rem;
+        line-height: 28px;
+
+        color: #ffffff;
+    }
+}
+.price-history-top {
+    background: #191b1d;
+    border-radius: 19px;
+    width: 100%;
+    padding: 20px 46px;
+
+    p {
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 20px;
+        color: #424b55;
+        margin-left: 28px;
+        margin-top: 8px;
+    }
+}
+.price-history-bottom {
+    display: flex;
+    align-items: center;
+    background: #191b1d;
+    border-radius: 19px;
+    margin-top: 24px;
+
+    figure {
+        width: 50%;
+    }
+
+    figure > img {
+        width: 100%;
+    }
+
+    figure::before {
+        content: 'Price History';
+        font-weight: 600;
+    }
+}
+
+.team {
+    background: #191b1d;
+    border-radius: 19px;
+    padding-top: 25px;
+    padding-left: 33px;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-right: 40px;
+    padding-bottom: 6px;
+    margin-top: 14px;
+    border-bottom: 1px solid #25282b;
+    cursor: pointer;
+    position: relative;
+}
+
+.member::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: 28px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #83e868;
+}
+
+.member:last-child {
+    margin-bottom: 12px;
+}
+
+.avatar {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.name {
+    font-size: 1.2rem;
+    line-height: 15px;
+
+    color: #ffffff;
+    opacity: 0.8;
+}

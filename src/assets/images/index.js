@@ -50,6 +50,23 @@ const images = {
     category6: require('~/assets/images/category6.jpg'),
     category7: require('~/assets/images/category7.png'),
     category8: require('~/assets/images/category8.png'),
+    gimIcon: require('~/assets/images/gimIcon.svg').default,
+    mintedIcon: require('~/assets/images/mintedIcon.svg').default,
+    offerIcon: require('~/assets/images/offerIcon.svg').default,
+    saleIcon: require('~/assets/images/saleIcon.svg').default,
+    transferIcon: require('~/assets/images/transferIcon.svg').default,
+    dashboardIcon1: require('~/assets/images/dashboardIcon1.svg').default,
+    dashboardIcon2: require('~/assets/images/dashboardIcon2.svg').default,
+    dashboardIcon3: require('~/assets/images/dashboardIcon3.svg').default,
+    dashboardIcon4: require('~/assets/images/dashboardIcon4.svg').default,
+    dashboardIcon5: require('~/assets/images/dashboardIcon5.svg').default,
+    team1: require('~/assets/images/team1.svg').default,
+    team2: require('~/assets/images/team2.svg').default,
+    team3: require('~/assets/images/team3.svg').default,
+    team4: require('~/assets/images/team4.svg').default,
+    team5: require('~/assets/images/team5.svg').default,
+    stats: require('~/assets/images/stats.svg').default,
+    decorDashboard: require('~/assets/images/decorDashboard.svg').default,
 };
 
 export default images;
