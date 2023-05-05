@@ -1,0 +1,117 @@
+.wrapper {
+    width: var(--default-layout-width);
+    font-family: 'Sora', sans-serif;
+    color: #f9f9f9;
+    margin-top: 135px;
+    padding-bottom: 150px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 38px;
+    border-bottom: 1px solid #272633;
+
+    div > span {
+        margin-right: 54px;
+        font-weight: 600;
+        font-size: 2.2rem;
+        line-height: 1.45;
+
+        color: #858b93;
+    }
+}
+
+.title {
+    background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    cursor: pointer;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: 40% 1fr 1fr 1fr;
+    padding-top: 70px;
+}
+
+.column {
+    h3 {
+        font-weight: 600;
+        font-size: 2.2rem;
+        line-height: 32px;
+    }
+}
+
+.form-group {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #272633;
+    border-radius: 26px;
+    margin-top: 44px;
+
+    width: 307px;
+    input {
+        flex: 1;
+        padding-top: 11px;
+        padding-bottom: 14px;
+        padding-left: 25px;
+        background-color: transparent;
+        color: #f9f9f9;
+        font-family: 'Sora', sans-serif;
+    }
+}
+
+.form-group figure {
+    background: linear-gradient(90deg, #eb9204 -33.14%, #83e868 116.38%);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 7px;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 45px;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+}
+
+.socials div {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #272633;
+    backdrop-filter: blur(5px);
+    &:hover {
+        margin-top: -6px;
+    }
+}
+
+.column h4 {
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: 2.11;
+
+    color: #858b93;
+
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.column h4:first-of-type {
+    margin-top: 22px;
+}

@@ -1,3 +1,28 @@
 .wrapper {
     color: #f9f9f9;
+    padding-top: 70px;
+    font-family: 'Sora', sans-serif;
+
+    h2 {
+        font-size: 7.6rem;
+        line-height: 1.16;
+        letter-spacing: -0.04em;
+        text-transform: capitalize;
+        color: #ffae1e;
+    }
+
+    p {
+        font-weight: 400;
+        font-size: 2rem;
+        line-height: 1.7;
+        letter-spacing: -0.02em;
+        width: 515px;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+}
+
+.images img:last-child {
+    transform: rotate(18deg);
+    margin-left: 28px;
 }

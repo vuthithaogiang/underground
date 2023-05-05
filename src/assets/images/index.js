@@ -67,6 +67,12 @@ const images = {
     team5: require('~/assets/images/team5.svg').default,
     stats: require('~/assets/images/stats.svg').default,
     decorDashboard: require('~/assets/images/decorDashboard.svg').default,
+    facebookIcon: require('~/assets/images/fb.svg').default,
+    twitterIcon: require('~/assets/images/twtt.svg').default,
+    linkInIcon: require('~/assets/images/in.svg').default,
+    arrow: require('~/assets/images/arrow.svg').default,
+    number4: require('~/assets/images/4.svg').default,
+    errorIcon: require('~/assets/images/errorIcon.svg').default,
 };
 
 export default images;

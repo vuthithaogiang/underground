@@ -54,11 +54,12 @@
 }
 
 .round {
+    background: linear-gradient(0deg, rgba(42, 24, 24, 0.06), rgba(0, 0, 0, 0.06)), var(--primary-color);
     border: 1px solid var(--primary-color);
-    color: var(--primary-color);
+    color: #f9f9f9;
     border-radius: 99px;
     &:hover {
-        background: linear-gradient(0deg, rgba(42, 24, 24, 0.06), rgba(0, 0, 0, 0.06)), var(--primary-color);
+        margin-top: -10px;
     }
 }
 

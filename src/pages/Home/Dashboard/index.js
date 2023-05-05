@@ -155,7 +155,7 @@ function Dashboard() {
                                 <p className={cx('name')}>Maisis paul</p>
                             </div>
                         </div>
-                        <Button primary={true}>View Our</Button>
+                        <Button primary={true}>View us</Button>
                     </div>
                 </div>
             </div>
