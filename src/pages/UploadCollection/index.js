@@ -54,6 +54,7 @@ function UploadCollection() {
                 headers: { 'Content-Type': 'multipart/form-data' },
                 withCredentials: true,
             });
+            console.log(response);
 
             setOpenBackDrop(false);
             navigate(`/account/${recoilState.accountCurrent}`);

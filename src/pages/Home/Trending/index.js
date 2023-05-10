@@ -3,6 +3,7 @@ import styles from './Trending.module.scss';
 import images from '~/assets/images';
 import { collectionItems } from '~/data';
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -20,6 +21,8 @@ function Trending() {
 
     const [option, setOption] = useState(options[0].title);
     const [currentState, setCurrentState] = useState(1);
+
+    const navigate = useNavigate();
     return (
         <div className={cx('wrapper')}>
             <header className={cx('header')}>
@@ -51,7 +54,9 @@ function Trending() {
                             </div>
                         ))}
 
-                    <button className={cx('btn-view-all')}>View All</button>
+                    <button className={cx('btn-view-all')} onClick={() => navigate('/collection')}>
+                        View All
+                    </button>
                 </div>
             </header>
 

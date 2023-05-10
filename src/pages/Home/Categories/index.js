@@ -1,7 +1,6 @@
 import classNames from 'classnames/bind';
 import styles from './Categories.module.scss';
 import { categoryCollection } from '~/data';
-import images from '~/assets/images';
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import CollectionLarge from '~/components/CollectionLarge';

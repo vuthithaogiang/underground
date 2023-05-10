@@ -1,4 +1,4 @@
-import axiosClient from 'utils/axiosClient';
+import axiosClient from '~/untils/axiosClient';
 
 export const getTopTenCollectionLatest = async (order = 'DESC') => {
     const response = await axiosClient.post('/collection/filter', {
