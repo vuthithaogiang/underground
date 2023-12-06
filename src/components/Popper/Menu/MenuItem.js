@@ -27,13 +27,15 @@ function MenuItem({ className, item, onClick }) {
 
     if (!item.separate) {
         return (
-            <Button className={classes} leftIcon={item.icon} to={item.to} onClick={onClick}>
+            <Button className={classes} leftIcon={item.icon}
+             to={item.to} onClick={onClick}>
                 {item.title}
             </Button>
         );
     } else {
         return (
-            <Button className={classes} leftIcon={item.icon} to={item.to} onClick={handleLogout}>
+            <Button className={classes} leftIcon={item.icon} 
+            to={item.to} onClick={handleLogout}>
                 {item.title}
             </Button>
         );

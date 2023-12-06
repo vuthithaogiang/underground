@@ -73,6 +73,7 @@ const images = {
     arrow: require('~/assets/images/arrow.svg').default,
     number4: require('~/assets/images/4.svg').default,
     errorIcon: require('~/assets/images/errorIcon.svg').default,
+    bannerDefault: require('~/assets/images/bannerDefault.jpg'),
 };
 
 export default images;

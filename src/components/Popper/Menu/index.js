@@ -39,7 +39,8 @@ function Menu({ items = [], children }) {
                                 <MenuHeader
                                     title="Language"
                                     onBack={() => {
-                                        setHistory((prev) => prev.slice(0, prev.length - 1));
+                                        setHistory((prev) =>
+                                         prev.slice(0, prev.length - 1));
                                     }}
                                 />
                             )}

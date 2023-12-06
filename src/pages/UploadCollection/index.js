@@ -194,7 +194,7 @@ function UploadCollection() {
                                             {item.categoryName}
                                         </option>
                                     ))}
-                                </select>
+                                </select> 
                             </div>
                             {errors.categoryId && <p className={cx('form-error')}>Choose a Category.</p>}
                         </div>

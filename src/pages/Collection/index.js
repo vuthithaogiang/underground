@@ -6,6 +6,7 @@ import { collectionTest } from '~/data';
 import images from '~/assets/images';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSort, faSortDown, faSortUp } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 const cx = classNames.bind(styles);
 
@@ -13,6 +14,7 @@ function Collection() {
     const [filter, setFilter] = useState('DESC');
     const [type, setType] = useState('');
     const [data, setData] = useState(collectionTest);
+    const navigate = useNavigate();
 
     useEffect(() => {
         getTopTenCollectionLatest(filter).then((data) => {
@@ -77,7 +79,7 @@ function Collection() {
                 </span>
             </div>
             {data.map((item, index) => (
-                <div className={cx('item')} key={index}>
+                <div className={cx('item')} key={index} onClick={() => navigate(`/collection/${item.collectionName}`)}>
                     <div className={cx('collection')}>
                         <span className={cx('roll')}>{item.collectionId}</span>
                         <img className={cx('thumbnail-collection')} alt="" src={item.logoImage} />
